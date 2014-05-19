@@ -2,7 +2,7 @@
 
 """
 Serialize data to/from JSON
-Inspired by https://github.com/django/django/blob/master/django/core/serializers/json.py
+Inspired by http://git.io/7j9pPg
 """
 
 # Avoid shadowing the standard library json module
