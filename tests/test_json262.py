@@ -10,7 +10,7 @@ Tests for `json262` module.
 
 import unittest
 
-from json262 import JSON262Encoder, encode_datetime
+from json262 import JSON262Encoder
 
 import datetime
 import json
@@ -102,10 +102,3 @@ def test_json_encoder_datetime_json():
     """ JSON262Encoder should work with datetimes. Pass in as dumps() cls parameter. """
     items = json.dumps({'day_and_time': datetime.datetime(2006, 11, 21, 16, 30)}, cls=JSON262Encoder)
     assert items == '{"day_and_time": "2006-11-21T16:30:00"}'
-
-
-# Encoder function tests
-def test_encode_datetime():
-    """ JSON262Encoder should work with datetimes. """
-    val = datetime.datetime(2006, 11, 21, 16, 30)
-    assert encode_datetime(val) == '2006-11-21T16:30:00'
