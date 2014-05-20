@@ -18,7 +18,7 @@ import datetime
 import decimal
 import json
 
-import json262.encoders
+from .encoder_funcs import encode_datetime, encode_date, encode_time, encode_decimal
 
 
 class JSON262Encoder(json.JSONEncoder):
@@ -28,12 +28,12 @@ class JSON262Encoder(json.JSONEncoder):
     def default(self, o):
         # See "Date Time String Format" in the ECMA-262 specification.
         if isinstance(o, datetime.datetime):
-            return encoders.encode_datetime(o)
+            return encode_datetime(o)
         elif isinstance(o, datetime.date):
-            return encoders.encode_date(o)
+            return encode_date(o)
         elif isinstance(o, datetime.time):
-            return encoders.encode_time(o)
+            return encode_time(o)
         elif isinstance(o, decimal.Decimal):
-            return encoders.encode_decimal(o)
+            return encode_decimal(o)
         else:
             return super(JSON262Encoder, self).default(o)
