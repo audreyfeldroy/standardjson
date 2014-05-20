@@ -20,7 +20,11 @@ JSON encoder fully compliant with ECMA-262 specification.
 Features
 --------
 
-* TODO
+Support for all objects that the Python stdlib's `json.JSONEncoder` can encode, plus:
+
+* `datetime.datetime`
+* `datetime.date`
+* `datetime.time`
 
 Quickstart
 ----------
