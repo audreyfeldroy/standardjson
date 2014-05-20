@@ -35,7 +35,7 @@ test_requirements = [
 
 setup(
     name='json262',
-    version='0.1.0',
+    version='0.2.0',
     description='JSON encoder fully compliant with ECMA-262 specification.',
     long_description=readme + '\n\n' + history,
     author='Audrey Roy',
@@ -52,7 +52,7 @@ setup(
     zip_safe=False,
     keywords='json262',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
