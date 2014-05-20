@@ -15,7 +15,7 @@ json262
 JSON encoder fully compliant with ECMA-262 specification.
 
 * Free software: BSD license
-* Documentation: http://json262.rtfd.org.
+* Documentation: http://json262.readthedocs.org.
 
 Features
 --------
