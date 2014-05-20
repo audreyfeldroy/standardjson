@@ -14,6 +14,9 @@ import decimal
 import json
 
 
+def encode_datetime(o):
+    pass
+
 class JSON262Encoder(json.JSONEncoder):
     """
     JSON encoder aiming to be fully compliant with ECMA-262.
