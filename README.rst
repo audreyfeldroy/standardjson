@@ -25,6 +25,9 @@ Support for all objects that the Python stdlib's `json.JSONEncoder` can encode, 
 * `datetime.datetime`
 * `datetime.date`
 * `datetime.time`
+* `decimal.Decimal`
+
+Works on Python 2.6, 2.7, 3.3. Probably works on 3.4 and 3.5 but I haven't set up tests for those with Tox yet.
 
 Quickstart
 ----------
