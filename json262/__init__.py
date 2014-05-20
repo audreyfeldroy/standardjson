@@ -18,7 +18,7 @@ import datetime
 import decimal
 import json
 
-import encoders
+import json262.encoders
 
 
 class JSON262Encoder(json.JSONEncoder):
