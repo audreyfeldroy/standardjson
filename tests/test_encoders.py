@@ -10,7 +10,7 @@ Tests for `json262.encoders` module.
 
 import unittest
 
-from json262.encoders import encode_datetime
+from json262.encoders import encode_datetime, encode_date, encode_time
 
 import datetime
 import json

@@ -30,14 +30,9 @@ class JSON262Encoder(json.JSONEncoder):
         if isinstance(o, datetime.datetime):
             return encoders.encode_datetime(o)
         elif isinstance(o, datetime.date):
-            return o.isoformat()
+            return encoders.encode_date(o)
         elif isinstance(o, datetime.time):
-            r = o.isoformat()
-            if o.microsecond:
-                r = r[:12]
-            if r.endswith('+00:00'):
-                r = r[:-6] + 'Z'
-            return r
+            return encoders.encode_time(o)
         elif isinstance(o, decimal.Decimal):
             return str(o)
         else:
