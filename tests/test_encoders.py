@@ -10,10 +10,11 @@ Tests for `json262.encoders` module.
 
 import unittest
 
-from json262.encoders import encode_datetime, encode_date, encode_time
+from json262.encoders import encode_datetime, encode_date, encode_time, encode_decimal
 
 import datetime
 import json
+import decimal
 
 
 def test_encode_datetime():
@@ -30,3 +31,8 @@ def test_encode_time():
     """ encode_time() should return a ECMA-262 compliant time string. """
     val = datetime.time(16, 30)
     assert encode_time(val) == '16:30:00'
+
+def test_encode_decimal():
+    """ encode_decimal() should return an ECMA-262 compliant decimal string. """
+    val = decimal.Decimal('0.1428571428571428571428571429')
+    assert encode_decimal(val) == '0.1428571428571428571428571429'

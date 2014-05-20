@@ -18,3 +18,6 @@ def encode_time(o):
     if r.endswith('+00:00'):
         r = r[:-6] + 'Z'
     return r
+
+def encode_decimal(o):
+    return str(o)

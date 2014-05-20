@@ -34,6 +34,6 @@ class JSON262Encoder(json.JSONEncoder):
         elif isinstance(o, datetime.time):
             return encoders.encode_time(o)
         elif isinstance(o, decimal.Decimal):
-            return str(o)
+            return encoders.encode_decimal(o)
         else:
             return super(JSON262Encoder, self).default(o)
