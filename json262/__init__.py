@@ -20,7 +20,13 @@ import json
 
 
 def encode_datetime(o):
-    pass
+    r = o.isoformat()
+    if o.microsecond:
+        r = r[:23] + r[26:]
+    if r.endswith('+00:00'):
+        r = r[:-6] + 'Z'
+    return r
+
 
 class JSON262Encoder(json.JSONEncoder):
     """
@@ -29,12 +35,7 @@ class JSON262Encoder(json.JSONEncoder):
     def default(self, o):
         # See "Date Time String Format" in the ECMA-262 specification.
         if isinstance(o, datetime.datetime):
-            r = o.isoformat()
-            if o.microsecond:
-                r = r[:23] + r[26:]
-            if r.endswith('+00:00'):
-                r = r[:-6] + 'Z'
-            return r
+            return encode_datetime(o)
         elif isinstance(o, datetime.date):
             return o.isoformat()
         elif isinstance(o, datetime.time):
