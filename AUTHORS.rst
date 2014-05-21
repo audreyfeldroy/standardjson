@@ -5,9 +5,12 @@ Credits
 Development Lead
 ----------------
 
-* Audrey Roy <audreyr@gmail.com>
+* Audrey Roy (`@audreyr`_)
 
 Contributors
 ------------
 
-None yet. Why not be the first?
+* Daniel Greenfeld (`@pydanny`_)
+
+.. _`@audreyr`: https://github.com/audreyr
+.. _`@pydanny`: https://github.com/pydanny
