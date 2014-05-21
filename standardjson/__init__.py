@@ -2,7 +2,7 @@
 
 __author__ = 'Audrey Roy'
 __email__ = 'audreyr@gmail.com'
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 
 """
 Serialize data to/from JSON

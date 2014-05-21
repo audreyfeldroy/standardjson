@@ -35,7 +35,7 @@ test_requirements = [
 
 setup(
     name='standardjson',
-    version='0.3.0',
+    version='0.3.1',
     description='JSON encoder that aims to be fully compliant with specifications ECMA-262 and ECMA-404.',
     long_description=readme + '\n\n' + history,
     author='Audrey Roy',

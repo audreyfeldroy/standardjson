@@ -3,6 +3,11 @@
 History
 -------
 
+0.3.1 (2014-05-21)
+------------------
+
+* Full rename to `standardjson` (missed some files in 0.3.0).
+
 0.3.0 (2014-05-21)
 ------------------
 
