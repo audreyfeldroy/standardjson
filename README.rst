@@ -40,3 +40,18 @@ Use `StandardJSONEncoder` as you would use `json.JSONEncoder` from the Python st
 
     >>> json.dumps({'day': datetime.date(2010, 2, 17)}, cls=StandardJSONEncoder)
     '{"day": "2010-02-17"}'
+
+FAQ
+----
+
+Does StandardJSONEncoder provide info about the Python type of the object?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No. `StandardJSONEncoder` purposely does not, in favor of a human-style,
+type-agnostic approach. 
+
+When encoded by `StandardJSONEncoder`, there is no differentiation between
+the string `"2010-02-17"` and the date object `date(2010, 2, 17)}`. This is
+the same approach described in ECMA-404, Introduction, paragraph 2:
+
+> JSON is agnostic about numbers. In any programming language, there can be a variety of number types of various capacities and complements, fixed or floating, binary or decimal. That can make interchange between different programming languages difficult. JSON instead offers only the representation of numbers that humans use: a sequence of digits. All programming languages know how to make sense of digit sequences even if they disagree on internal representations. That is enough to allow interchange. 
