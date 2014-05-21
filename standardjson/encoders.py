@@ -26,4 +26,4 @@ class StandardJSONEncoder(json.JSONEncoder):
         elif isinstance(o, decimal.Decimal):
             return encode_decimal(o)
         else:
-            return super(JSON262Encoder, self).default(o)
+            return super(StandardJSONEncoder, self).default(o)

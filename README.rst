@@ -36,7 +36,7 @@ Use `StandardJSONEncoder` as you would use `json.JSONEncoder` from the Python st
 
     >>> import datetime
     >>> import json
-    >>> from json262 import StandardJSONEncoder
+    >>> from standardjson import StandardJSONEncoder
 
     >>> json.dumps({'day': datetime.date(2010, 2, 17)}, cls=StandardJSONEncoder)
     '{"day": "2010-02-17"}'

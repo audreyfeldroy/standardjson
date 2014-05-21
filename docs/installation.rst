@@ -4,9 +4,9 @@ Installation
 
 At the command line::
 
-    $ easy_install json262
+    $ easy_install standardjson
 
 Or, if you have virtualenvwrapper installed::
 
-    $ mkvirtualenv json262
-    $ pip install json262
+    $ mkvirtualenv standardjson
+    $ pip install standardjson

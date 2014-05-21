@@ -40,7 +40,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Audrey Roy',
     author_email='audreyr@gmail.com',
-    url='https://github.com/audreyr/json262',
+    url='https://github.com/audreyr/standardjson',
     packages=[
         'standardjson',
     ],
