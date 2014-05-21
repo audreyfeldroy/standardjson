@@ -5,12 +5,12 @@
 test_encoders
 ----------------------------------
 
-Tests for `json262.encoders` module.
+Tests for `standardjson.encoders` module.
 """
 
 import unittest
 
-from json262.encoder_funcs import encode_datetime, encode_date, encode_time, encode_decimal
+from standardjson.encoder_funcs import encode_datetime, encode_date, encode_time, encode_decimal
 
 import datetime
 import json

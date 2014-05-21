@@ -9,4 +9,4 @@ Serialize data to/from JSON
 Inspired by http://git.io/7j9pPg
 """
 
-from .encoders import JSON262Encoder
+from .encoders import StandardJSONEncoder

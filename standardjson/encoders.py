@@ -11,7 +11,7 @@ import json
 from .encoder_funcs import encode_datetime, encode_date, encode_time, encode_decimal
 
 
-class JSON262Encoder(json.JSONEncoder):
+class StandardJSONEncoder(json.JSONEncoder):
     """
     JSON encoder aiming to be fully compliant with ECMA-262.
     """

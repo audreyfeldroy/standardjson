@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*-
 
 """
-test_json262
+test_standardjson
 ----------------------------------
 
-Tests for `json262` module.
+Tests for `standardjson` module.
 """
 
 import unittest
 
-from json262 import JSON262Encoder
+from standardjson import StandardJSONEncoder
 
 import datetime
 import json
@@ -18,40 +18,40 @@ import json
 
 # Unit tests
 def test_json_encoder_date():
-    """ JSON262Encoder should work with dates. """
-    encoder = JSON262Encoder()
+    """ StandardJSONEncoder should work with dates. """
+    encoder = StandardJSONEncoder()
     items = encoder.default(datetime.date(2010, 2, 17))
     assert items == '2010-02-17'
 
 
 def test_json_encoder_datetime():
-    """ JSON262Encoder should work with datetimes. """
-    encoder = JSON262Encoder()
+    """ StandardJSONEncoder should work with datetimes. """
+    encoder = StandardJSONEncoder()
     items = encoder.default(datetime.datetime(2006, 11, 21, 16, 30))
     assert items == '2006-11-21T16:30:00'
 
 
 def test_json_encoder_time():
-    """ JSON262Encoder should work with times. """
-    encoder = JSON262Encoder()
+    """ StandardJSONEncoder should work with times. """
+    encoder = StandardJSONEncoder()
     items = encoder.default(datetime.time(16, 30))
     assert items == '16:30:00'
 
 
 def test_json_encoder_time_microsecond():
-    """ JSON262Encoder should work with times with microsecond info.
+    """ StandardJSONEncoder should work with times with microsecond info.
         ECMA-262 says, "sss is the number of complete milliseconds since the
         start of the second as three decimal digits." """
-    encoder = JSON262Encoder()
+    encoder = StandardJSONEncoder()
     items = encoder.default(datetime.time(16, 30, 1, 123456))
     assert items == '16:30:01.123'
 
 
 def test_json_encoder_time_tzinfo():
-    """ JSON262Encoder should work with times with timezone info.
+    """ StandardJSONEncoder should work with times with timezone info.
         ECMA-262 specifies that time zone offset can be like ZHH:mm, +HH:mm,
         or -HH:mm. """
-    encoder = JSON262Encoder()
+    encoder = StandardJSONEncoder()
 
     class GMT1(datetime.tzinfo):
         def utcoffset(self, dt):
@@ -67,10 +67,10 @@ def test_json_encoder_time_tzinfo():
 
 
 def test_json_encoder_time_tzinfo_gmt():
-    """ JSON262Encoder should work with times with timezone info.
+    """ StandardJSONEncoder should work with times with timezone info.
         ECMA-262 specifies that time zone offset can be like ZHH:mm, +HH:mm,
         or -HH:mm. """
-    encoder = JSON262Encoder()
+    encoder = StandardJSONEncoder()
 
     class GMT(datetime.tzinfo):
         def utcoffset(self, dt):
@@ -87,18 +87,18 @@ def test_json_encoder_time_tzinfo_gmt():
 
 # Integration tests
 def test_json_encoder_date_json():
-    """ JSON262Encoder should work with dates. Pass in as dumps() cls parameter. """
-    items = json.dumps({'day': datetime.date(2010, 2, 17)}, cls=JSON262Encoder)
+    """ StandardJSONEncoder should work with dates. Pass in as dumps() cls parameter. """
+    items = json.dumps({'day': datetime.date(2010, 2, 17)}, cls=StandardJSONEncoder)
     assert items == '{"day": "2010-02-17"}'
 
 
 def test_json_encoder_date2_json():
-    """ JSON262Encoder should work with dates. Test via encode()."""
-    items = JSON262Encoder().encode({'day': datetime.date(2010, 2, 17)})
+    """ StandardJSONEncoder should work with dates. Test via encode()."""
+    items = StandardJSONEncoder().encode({'day': datetime.date(2010, 2, 17)})
     assert items == '{"day": "2010-02-17"}'
 
 
 def test_json_encoder_datetime_json():
-    """ JSON262Encoder should work with datetimes. Pass in as dumps() cls parameter. """
-    items = json.dumps({'day_and_time': datetime.datetime(2006, 11, 21, 16, 30)}, cls=JSON262Encoder)
+    """ StandardJSONEncoder should work with datetimes. Pass in as dumps() cls parameter. """
+    items = json.dumps({'day_and_time': datetime.datetime(2006, 11, 21, 16, 30)}, cls=StandardJSONEncoder)
     assert items == '{"day_and_time": "2006-11-21T16:30:00"}'

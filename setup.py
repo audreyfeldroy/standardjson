@@ -34,23 +34,23 @@ test_requirements = [
 ]
 
 setup(
-    name='json262',
+    name='standardjson',
     version='0.2.0',
-    description='JSON encoder fully compliant with ECMA-262 specification.',
+    description='JSON encoder that aims to be fully compliant with specifications ECMA-262 and ECMA-404.',
     long_description=readme + '\n\n' + history,
     author='Audrey Roy',
     author_email='audreyr@gmail.com',
     url='https://github.com/audreyr/json262',
     packages=[
-        'json262',
+        'standardjson',
     ],
-    package_dir={'json262':
-                 'json262'},
+    package_dir={'standardjson':
+                 'standardjson'},
     include_package_data=True,
     install_requires=requirements,
     license="BSD",
     zip_safe=False,
-    keywords='json262',
+    keywords='standardjson',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
