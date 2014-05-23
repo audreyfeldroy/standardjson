@@ -61,5 +61,8 @@ What if my application requires Python language-dependent JSON?
 
 In that case, it's not a good use case for this package. The use case I have in mind is for taking Python objects and turning them into language-independent JSON. This is in the spirit of what JSON is designed for.
 
-As described on json.org, 
+As described on json.org,
+
 > "JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language." I will add this bit to the FAQ in the moment.
+
+Most real-world use cases of JSON should be fine with language-independent JSON, of course.
