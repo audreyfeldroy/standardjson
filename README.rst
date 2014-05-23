@@ -55,3 +55,11 @@ the string `"2010-02-17"` and the date object `date(2010, 2, 17)}`. This is
 the same approach described in ECMA-404, Introduction, paragraph 2:
 
 > JSON is agnostic about numbers. In any programming language, there can be a variety of number types of various capacities and complements, fixed or floating, binary or decimal. That can make interchange between different programming languages difficult. JSON instead offers only the representation of numbers that humans use: a sequence of digits. All programming languages know how to make sense of digit sequences even if they disagree on internal representations. That is enough to allow interchange. 
+
+What if my application requires Python language-dependent JSON?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In that case, it's not a good use case for this package. The use case I have in mind is for taking Python objects and turning them into language-independent JSON. This is in the spirit of what JSON is designed for.
+
+As described on json.org, 
+> "JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language." I will add this bit to the FAQ in the moment.
